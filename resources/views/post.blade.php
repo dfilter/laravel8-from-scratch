@@ -6,7 +6,10 @@
     </head>
     <body>
         <article>
-            <?= $post; ?>
+            <h1><?= $post->title; ?></h1>
+            <idv>
+                <?= $post->body; ?>
+            </idv>
         </article>
 
         <a href="/">Go Back</a>
