@@ -6,9 +6,9 @@
     </head>
     <body>
         <article>
-            <h1><?= $post->title; ?></h1>
+            <h1>{{ $post->title }}</h1>
             <idv>
-                <?= $post->body; ?>
+                {!! $post->body !!}
             </idv>
         </article>
 
