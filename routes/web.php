@@ -24,8 +24,7 @@ Route::get('/', function () {
 });
 
 Route::get('posts/{post}', function ($id) {
-    $user = User::findOrFail(1);
     return view('post', [
         'post' => Post::findOrFail($id),
     ]);
-})->where('post', '[A-z_\-]+');
+});
