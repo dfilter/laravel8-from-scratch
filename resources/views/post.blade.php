@@ -6,8 +6,7 @@
                     <img src="/images/illustration-1.png" alt="" class="rounded-xl">
 
                     <p class="mt-4 block text-gray-400 text-xs">
-                        Published
-                        <time>{{ $post->created_at->diffForHumans() }}</time>
+                        Published <time>{{ $post->created_at->diffForHumans() }}</time>
                     </p>
 
                     <div class="flex items-center lg:justify-center text-sm mt-4">
@@ -36,7 +35,7 @@
                         </a>
 
                         <div class="space-x-2">
-                            <x-category-button :category="$post->category"></x-category-button>
+                            <x-category-button :category="$post->category" />
                         </div>
                     </div>
 
@@ -44,25 +43,9 @@
                         {{ $post->title }}
                     </h1>
 
-                    <div class="space-y-4 lg:text-lg leading-loose">
-                        {{ $post->body }}
-                    </div>
+                    <div class="space-y-4 lg:text-lg leading-loose">{{ $post->body }}</div>
                 </div>
             </article>
         </main>
     </section>
 </x-layout>
-
-{{--<x-layout>--}}
-{{--    <article>--}}
-{{--        <h1>{{ $post->title }}</h1>--}}
-{{--        <p>--}}
-{{--            By <a href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a> in <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>--}}
-{{--        </p>--}}
-{{--        <div>--}}
-{{--            {!! $post->body !!}--}}
-{{--        </div>--}}
-{{--    </article>--}}
-
-{{--    <a href="/">Go Back</a>--}}
-{{--</x-layout>--}}
